@@ -19,3 +19,15 @@ printf "${GREEN}Deploying to production${COLOR_OFF}\n"
 
 printf "${YELLOW}--->${COLOR_OFF} Stopping workers\n"
 printf "${RED}Error due to something${COLOR_OFF}\n"
+
+
+while getopts "h?vf:" opt; do
+	case "$opt" in
+	h|\?) echo help
+		;;
+	v) echo verbose
+		;;
+	f) echo some_file
+		;;
+	esac
+done
